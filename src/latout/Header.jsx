@@ -14,7 +14,8 @@ const Header = () => {
       <div className="w-[90%] mx-auto  py-5 relative">
         <nav className='w-full flex items-center justify-between relative  z-[100] text-green-700 font-bold  text-center'>
           <div className="logo flex items-center">
-            <img src={logo} alt="" className='w-14 md:w-20'/>
+            {/* <img src={logo} alt="" className='w-14 md:w-20'/> */}
+            Brand LOGO
           </div>
           <ul className='lg:flex items-center    font-light font-serif hidden lg:mr-20 '>
               <li className='p-3 '> <NavLink to="/">Home</NavLink></li>
@@ -48,11 +49,11 @@ const Header = () => {
         <div className=" flex flex-col  w-full">
           <div className="flex w-full items-center justify-between pt-6">
             <NavLink to="/">
-            <img
+            {/* <img
               src={logo}
               alt=""
               className="w-[80px] "
-            />
+            /> */} Brand Logo
             </NavLink>
             
             <div className="p-2 border border-black cursor-pointer text-xl font-semibold" onClick={()=>SetToggle(!toggle)}>
