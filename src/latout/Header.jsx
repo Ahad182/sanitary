@@ -32,7 +32,7 @@ const Header = () => {
               <li className='p-3'> <NavLink to="/">Home Hardware</NavLink></li>
               <li className='p-3'> <NavLink to="/">Bathroom</NavLink></li>
               <li className='p-3'> <NavLink to="/">Wardrobe Accessories</NavLink></li>
-              <li className='p-3'> <NavLink to="/">Contact</NavLink></li>
+              <li className='p-3'> <NavLink to="contact">Contact</NavLink></li>
           </ul>
           <div className="lg:hidden">
             <HiMenu onClick={()=>SetToggle(!toggle)}/>
