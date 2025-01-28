@@ -10,7 +10,7 @@ import profile6 from "../../assets/images/profile/profile6.jpg"
 const Testimonial = () => {
   return (
     <div className='w-full my-10  mt-20'>
-      <h1 className='text-center font-bold text-5xl'>Testimonials</h1>
+      <h1 className='text-center font-bold text-3xl md:text-5xl'>Testimonials</h1>
       <div className="w-[80%] mx-auto mt-7 relative">
         <Swiper
         modules={[Pagination,Navigation,Autoplay]}

@@ -9,8 +9,8 @@ const ProductDisplay = ({title}) => {
   return (
     <div className='w-full  pt-20 font-Crimson'>
       <div className="w-[80%] mx-auto">
-        <h1 className='text-5xl font-Crimson'>{title}</h1>
-        <div className='grid grid-cols-2 md:grid-cols-4 mt-4 gap-2'>
+        <h1 className='text-3xl  md:text-5xl font-Crimson'>{title}</h1>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4 gap-2'>
             <ProductDisplayCard img={basin1} title={"Treno Basin"}/>
             <ProductDisplayCard img={basin2} title={"Treno Basin"}/>
             <ProductDisplayCard img={basin3} title={"Treno Basin"}/>

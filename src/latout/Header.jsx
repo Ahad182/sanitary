@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import logo from "../assets/images/logoMain.png"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
 const Header = () => {
+  const location=useLocation()
+  console.log(location.pathname)
   const [showSubMenu,SetShowSubMenu] = useState(false)
   const [SubMenu, SetSubMenu] = useState(false);
   const [toggle, SetToggle] = useState(false);
   return (
     <>
-    <div className='w-full  bg-[#FFDBAC] relative h-[20vh]'>
+    <div className={`w-full  ${location.pathname==="/collection" || location.pathname==="/contact"  ?"bg-gray-300":"bg-[#FFDBAC]"} relative h-[15vh]`}>
       <div className="w-[90%] mx-auto  py-5 relative">
         <nav className='w-full flex items-center justify-between relative  z-[100] text-green-700 font-bold  text-center'>
           <div className="logo flex items-center">
@@ -19,7 +21,7 @@ const Header = () => {
           </div>
           <ul className='lg:flex items-center    font-light font-serif hidden lg:mr-20 '>
               <li className='p-3 '> <NavLink to="/">Home</NavLink></li>
-              <li onClick={()=>SetShowSubMenu(!showSubMenu)}  className=' p-3 relative'> <NavLink to="/" className="flex items-center gap-2 ">Kitchen  <span> {showSubMenu?<FaAngleUp/>: <FaAngleDown/>}</span></NavLink>
+              <li onClick={()=>SetShowSubMenu(!showSubMenu)}  className=' p-3 relative'> <NavLink to="" className="flex items-center gap-2 ">Kitchen  <span> {showSubMenu?<FaAngleUp/>: <FaAngleDown/>}</span></NavLink>
                 <ul className={`absolute  left-0 top-[33px] bg-[#FFDBAC] ${showSubMenu? "flex":" hidden"} flex-col gap-3 mt-4 w-[200px] p-2 shadow-2xl shadow-gray-950 transition-all duration-1000 ease-in-out`}>
                   <li className='px-3 py-1  '>Cuttalary </li>
                   <li className='px-3 py-1'>Knife </li>
